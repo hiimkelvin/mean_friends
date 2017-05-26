@@ -1,0 +1,7 @@
+<p>User-New Component</p>
+<form (submit)="addUser(formData)" #formData="ngForm">
+	First Name: <input type="text" name="first_name" ngModel>
+	Last Name: <input type="text" name="last_name" ngModel>
+	Birthday: <input type="date" name="birthday" ngModel>
+	<input type="submit" value="Create">
+</form>

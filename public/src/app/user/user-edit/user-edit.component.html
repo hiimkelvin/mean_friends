@@ -1,0 +1,8 @@
+<p>User-Edit Component</p>
+<!--{{ user | json }}-->
+<form *ngIf="user" (submit)="editUser()">
+	<input type="text" name="first_name" [(ngModel)]="user.first_name">
+	<input type="text" name="last_name" [(ngModel)]="user.last_name">
+	<input type="date" name="birthday" [(ngModel)]="user.birthday">
+	<input type="submit" value="Edit">
+</form>

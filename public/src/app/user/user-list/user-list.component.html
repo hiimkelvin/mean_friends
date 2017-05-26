@@ -1,0 +1,18 @@
+<!--<p>User-List Component</p>-->
+<!--{{ users | json }}-->
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Birthday</th>
+		<th>Show</th>
+		<th>Update</th>
+		<th>Delete</th>
+	</tr>
+	<tr *ngFor="let user of users">
+		<td>{{ user.first_name }} {{ user.last_name }}</td>
+		<td>{{ user.birthday | date: 'mediumDate' }}</td>
+		<td><a [routerLink]="['destroy', user._id]">Delete</a></td>
+		<td><a [routerLink]="['show', user._id ]">Show</a></td>
+		<td><a [routerLink]="['edit', user._id ]">Edit</a></td>
+	</tr>
+</table>
